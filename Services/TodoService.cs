@@ -11,7 +11,7 @@ public class TodoService
 
     public TodoItem Create(string title)
     {
-        var item = new TodoItem(Id = _nextId++, Title = title, IsCompleted = false);
+        var item = new TodoItem{Id = _nextId++, Title = title, IsCompleted = false};
         _items.Add(item);
         return item;
     }
